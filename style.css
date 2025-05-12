@@ -1,108 +1,92 @@
-/* Estilo general */
-body {
+/* Reset básico */
+body, html {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
-  background-color: #fff8f0;
+  background-color: #fffdf7;
 }
 
-/* Navbar oriental fijo en rojo y blanco */
+/* NAVBAR ORIENTAL FIJO SOLO PARA MÓVILES */
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  background-color: #b30000; /* rojo oriental */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: #b30000; /* Rojo japonés */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   z-index: 999;
+  padding: 12px 15px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* Botones del navbar */
-.navbar-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.navbar-links button {
-  background-color: #fff;
-  color: #b30000;
-  border: 2px solid #fff;
-  font-weight: bold;
-  padding: 10px 16px;
-  font-size: 15px;
-  border-radius: 6px;
+/* Icono hamburguesa oriental */
+.hamburger {
+  font-size: 28px;
+  color: white;
   cursor: pointer;
-  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+/* Enlaces del navbar desplegables */
+.navbar-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+/* Botones estilo oriental */
+.navbar-links button {
+  background-color: white;
+  color: #b30000;
+  border: 2px solid #b30000;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
 }
 
 .navbar-links button:hover {
-  background-color: #ffcccb;
-  border-color: #b30000;
+  background-color: #ffe5e5;
 }
 
-/* Icono hamburguesa */
-.hamburger {
-  display: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Responsive navbar */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* Secciones e imágenes con marco oriental */
-.seccion img {
-  width: 100%;
-  height: 100vh;
-  object-fit: contain;
-  border: 20px solid #b30000;
-  border-image: url('images/oriental-frame.png') 30 stretch; /* Marco decorativo */
-  background-color: white;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
+/* Estilo para secciones */
 .seccion {
   display: none;
-  margin-top: 80px; /* dejar espacio por la navbar */
+  margin-top: 160px; /* espacio para navbar */
+  padding: 10px;
 }
 
 .seccion.activa {
   display: block;
 }
 
-/* Modal */
+/* Estilo para imágenes: encuadre oriental */
+.seccion img {
+  width: 100%;
+  height: auto;
+  border: 8px solid #b30000;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Modal de registro */
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -110,24 +94,29 @@ body {
 
 .modal-content {
   background-color: #fff0f0;
-  border: 3px solid #b30000;
-  border-radius: 12px;
-  padding: 30px;
+  padding: 25px;
+  border-radius: 10px;
   text-align: center;
-  max-width: 400px;
-  box-shadow: 0 0 15px #b30000;
+  width: 90%;
+  max-width: 360px;
+  border: 3px solid #b30000;
+  box-shadow: 0 0 10px #b30000;
+}
+
+.modal-buttons {
+  margin-top: 20px;
 }
 
 .modal-buttons button {
   padding: 10px 20px;
-  margin: 10px;
+  margin: 5px;
   background-color: #b30000;
   color: #fff;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .modal-buttons button:hover {
