@@ -60,6 +60,28 @@ body, html {
   background-color: #ffe5e5;
 }
 
+/* Contenedor del icono y texto */
+.hamburger-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Texto flotante al lado de las 3 barras */
+.hamburger-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  animation: flotar 2s ease-in-out infinite alternate;
+  white-space: nowrap;
+}
+
+/* Animación suave estilo oriental */
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
 /* Estilo para secciones */
 .seccion {
   display: none;

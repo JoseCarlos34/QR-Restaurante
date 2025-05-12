@@ -9,18 +9,20 @@
 <body>
   <!-- Barra de navegación tipo hamburguesa -->
   <nav class="navbar">
-    <div class="hamburger" onclick="toggleNavbar()">
-      &#9776; <!-- Símbolo de las tres barras -->
-    </div>
-    <div class="navbar-links">
-      <button onclick="mostrarSeccion('carta1')">🍱 Para Comenzar!</button>
-      <button onclick="mostrarSeccion('carta2')">🍣 Fusion!</button>
-      <button onclick="mostrarSeccion('bebidas1')">🥤 Refrescos y Cocteles</button>
-      <button onclick="mostrarSeccion('bebidas2')">🍶 Clásicos y Especiales</button>
-      <button onclick="mostrarSeccion('combos')">🍛 Combos</button>
-      <button onclick="mostrarSeccion('promos')">🎉 Promos</button>
-    </div>
-  </nav>
+  <div class="hamburger-container">
+    <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+    <div class="hamburger-text">🎌 Explora NAGASAKI 🍜</div>
+  </div>
+  <div class="navbar-links">
+    <button onclick="mostrarSeccion('carta1')">🍱 Para Comenzar!</button>
+    <button onclick="mostrarSeccion('carta2')">🍣 Fusión!</button>
+    <button onclick="mostrarSeccion('bebidas1')">🥤 Refrescos y Cócteles</button>
+    <button onclick="mostrarSeccion('bebidas2')">🍶 Clásicos</button>
+    <button onclick="mostrarSeccion('combos')">🍛 Combos</button>
+    <button onclick="mostrarSeccion('promos')">🎉 Promos</button>
+  </div>
+</nav>
+
 
   <div class="secciones">
     <section id="carta1" class="seccion activa">
