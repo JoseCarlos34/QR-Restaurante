@@ -24,4 +24,22 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("modal").style.display = "none";
     });
   }
+
+  // Ocultar y mostrar navbar al hacer scroll
+  let lastScrollTop = 0;
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll hacia abajo: ocultar navbar
+      navbar.classList.add("oculto");
+    } else {
+      // Scroll hacia arriba: mostrar navbar
+      navbar.classList.remove("oculto");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
 });
