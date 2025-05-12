@@ -7,14 +7,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navbar con hamburguesa -->
   <nav class="navbar">
-    <button onclick="mostrarSeccion('carta1')">🍱 Para Comenzar!</button>
-    <button onclick="mostrarSeccion('carta2')">🍣 Fusion!</button>
-    <button onclick="mostrarSeccion('bebidas1')">🥤 Refrescos y Cocteles</button>
-    <button onclick="mostrarSeccion('bebidas2')">🍶 Clásicos y Especiales</button>
-    <button onclick="mostrarSeccion('combos')">🍛 Combos</button>
-    <button onclick="mostrarSeccion('promos')">🎉 Promos</button>
-
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776; <!-- Icono de tres barras -->
+    </div>
+    <div class="navbar-links">
+      <button onclick="mostrarSeccion('carta1')">🍱 Para Comenzar!</button>
+      <button onclick="mostrarSeccion('carta2')">🍣 Fusion!</button>
+      <button onclick="mostrarSeccion('bebidas1')">🥤 Refrescos y Cocteles</button>
+      <button onclick="mostrarSeccion('bebidas2')">🍶 Clásicos y Especiales</button>
+      <button onclick="mostrarSeccion('combos')">🍛 Combos</button>
+      <button onclick="mostrarSeccion('promos')">🎉 Promos</button>
+    </div>
   </nav>
 
   <div class="secciones">
@@ -46,10 +51,11 @@
   <!-- MODAL REGISTRO -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <p>¡Registrate completando el formulario y disfruta los beneficios de "🍣🥢 NAGASAKI 🏮🍜"! </p>
+      <p>¡Registrate completando el formulario y disfruta los beneficios de
+                          "🍣🥢 NAGASAKI 🏮🍜"! </p>
       <div class="modal-buttons">
         <button id="aceptarBtn">Sí, quiero</button>
-        <button id="cancelarBtn">No, gracias</button>
+        <button id="cancelarBtn">No</button>
       </div>
     </div>
   </div>
