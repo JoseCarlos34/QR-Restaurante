@@ -1,10 +1,4 @@
-// Mostrar o ocultar el menú de navegación en móvil
-function toggleMenu() {
-  const navbarLinks = document.querySelector('.navbar-links');
-  navbarLinks.classList.toggle('show');
-}
-
-// Mostrar sección de la carta
+// Mostrar sección activa
 function mostrarSeccion(id) {
   document.querySelectorAll('.seccion').forEach(seccion => {
     seccion.classList.remove('activa');
@@ -12,7 +6,7 @@ function mostrarSeccion(id) {
   document.getElementById(id).classList.add('activa');
 }
 
-// Mostrar modal después de 3 segundos
+// Mostrar el modal después de 3 segundos
 setTimeout(() => {
   document.getElementById("modal").style.display = "flex";
 }, 3000);
@@ -32,3 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Función para mostrar u ocultar el menú hamburguesa
+function toggleNavbar() {
+  const navbarLinks = document.querySelector('.navbar-links');
+  navbarLinks.classList.toggle('active');
+}
