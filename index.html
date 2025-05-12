@@ -7,20 +7,51 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🍣 NAGASAKI 🍣 </h1>
-    <p>¡Bienvenido! Descubre lo mejor de la comida oriental. 🥢</p>
+  <nav class="navbar">
+    <button onclick="mostrarSeccion('carta1')">Carta 1</button>
+    <button onclick="mostrarSeccion('carta2')">Carta 2</button>
+    <button onclick="mostrarSeccion('bebidas1')">Bebidas 1</button>
+    <button onclick="mostrarSeccion('bebidas2')">Bebidas 2</button>
+    <button onclick="mostrarSeccion('combos')">Combos</button>
+    <button onclick="mostrarSeccion('promos')">Promos</button>
+  </nav>
 
-    <div class="menu">
-      <div class="item"><span>🍣 Maki Clásico</span><span>S/ 12.00</span></div>
-      <div class="item"><span>🍤 Tempura Maki</span><span>S/ 14.00</span></div>
-      <div class="item"><span>🍱 Bento Box</span><span>S/ 20.00</span></div>
-      <div class="item"><span>🍜 Ramen Especial</span><span>S/ 18.00</span></div>
-      <div class="item"><span>🥟 Gyozas (6 unid.)</span><span>S/ 10.00</span></div>
-      <div class="item"><span>🍵 Té Verde</span><span>S/ 5.00</span></div>
+  <div class="secciones">
+    <section id="carta1" class="seccion activa">
+      <img src="images/CartaNagasaki1.png" alt="Carta 1" />
+    </section>
+
+    <section id="carta2" class="seccion">
+      <img src="images/CartaNagasaki2.png" alt="Carta 2" />
+    </section>
+
+    <section id="bebidas1" class="seccion">
+      <img src="images/Bebidas1.png" alt="Bebidas 1" />
+    </section>
+
+    <section id="bebidas2" class="seccion">
+      <img src="images/Bebidas2.png" alt="Bebidas 2" />
+    </section>
+
+    <section id="combos" class="seccion">
+      <img src="images/NagasakiCombos.png" alt="Combos" />
+    </section>
+
+    <section id="promos" class="seccion">
+      <img src="images/NagasakiPromos.png" alt="Promociones" />
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <p>¿Deseas registrarte para recibir un descuento en tu próxima visita?</p>
+    <div class="modal-buttons">
+      <button id="aceptarBtn">Sí, quiero</button>
+      <button id="cancelarBtn">No, gracias</button>
     </div>
   </div>
-  <script src="script.js"></script>
+</div>
 
-</body>
 </html>
