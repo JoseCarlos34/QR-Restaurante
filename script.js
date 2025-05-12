@@ -1,11 +1,27 @@
+function mostrarSeccion(id) {
+  document.querySelectorAll('.seccion').forEach(seccion => {
+    seccion.classList.remove('activa');
+  });
+  document.getElementById(id).classList.add('activa');
+}
+
+// Mostrar modal después de 3 segundos
 setTimeout(() => {
   document.getElementById("modal").style.display = "flex";
 }, 3000);
 
-document.getElementById("aceptarBtn").addEventListener("click", () => {
-  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeHtaKN7-218pPcd7ZuuqJTFGOEZZLDFhHDdqhDMMMFLHBGJg/viewform";
-});
+// Eventos de los botones del modal
+document.addEventListener("DOMContentLoaded", () => {
+  const aceptarBtn = document.getElementById("aceptarBtn");
+  const cancelarBtn = document.getElementById("cancelarBtn");
 
-document.getElementById("cancelarBtn").addEventListener("click", () => {
-  document.getElementById("modal").style.display = "none";
+  if (aceptarBtn && cancelarBtn) {
+    aceptarBtn.addEventListener("click", () => {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeHtaKN7-218pPcd7ZuuqJTFGOEZZLDFhHDdqhDMMMFLHBGJg/viewform";
+    });
+
+    cancelarBtn.addEventListener("click", () => {
+      document.getElementById("modal").style.display = "none";
+    });
+  }
 });
