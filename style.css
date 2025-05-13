@@ -71,7 +71,7 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Contenedor del icono y texto (ajustado para ser más pequeño) */
+/* Contenedor del icono y texto */
 .hamburger-container {
   display: flex;
   align-items: center;
@@ -109,19 +109,24 @@ body, html {
   display: none;
   margin-top: 160px;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .seccion.activa {
-  display: block;
+  display: flex;
 }
 
-/* Estilo para imágenes: encuadre oriental */
+/* ✅ Estilo para centrar carta con marco */
 .seccion img {
-  width: 100%;
+  max-width: 90%;
   height: auto;
   border: 8px solid #b30000;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin: 0 auto;
 }
 
 /* Modal de registro */
@@ -191,5 +196,10 @@ body, html {
 
   .hamburger-container {
     max-width: 85%;
+  }
+
+  /* Ajustes para centrar imagen en móviles */
+  .seccion img {
+    max-width: 95%;
   }
 }
