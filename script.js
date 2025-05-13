@@ -25,10 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("modal").style.display = "none";
     });
   }
-});
 
-// Función para mostrar u ocultar el menú hamburguesa
-function toggleNavbar() {
+  // Asignar el evento al icono hamburguesa
+  const hamburger = document.querySelector('.hamburger');
   const navbarLinks = document.querySelector('.navbar-links');
-  navbarLinks.classList.toggle('active');
-}
+
+  if (hamburger && navbarLinks) {
+    hamburger.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+      hamburger.classList.toggle('active'); // Rotar icono hamburguesa
+    });
+  }
+});
