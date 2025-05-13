@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (aceptarBtn && cancelarBtn) {
     aceptarBtn.addEventListener("click", () => {
-      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeHtaKN7-218pPcd7ZuuqJTFGOEZZLDFhHDdqhDMMMFLHBGJg/viewform";
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScbi6Yvm_FYCHGXEDE40N8ejmK0H7z7aDpiO-W7DXcHatrvNA/viewform?usp=header";
     });
 
     cancelarBtn.addEventListener("click", () => {
