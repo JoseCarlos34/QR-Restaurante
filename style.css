@@ -19,17 +19,17 @@ body, html {
   padding: 12px 15px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrado del contenido */
+  align-items: center;
 }
 
 /* Icono hamburguesa oriental (más grande y visible) */
 .hamburger {
-  font-size: 32px; /* Aumentamos el tamaño */
+  font-size: 32px;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
   z-index: 1001;
-  transition: transform 0.3s ease-in-out; /* Animación rotatoria */
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Animación rotatoria cuando está activo */
@@ -41,7 +41,7 @@ body, html {
 .navbar-links {
   display: none;
   flex-direction: column;
-  align-items: center; /* Centra los botones */
+  align-items: center;
   width: 100%;
   gap: 12px;
   padding: 10px 0;
@@ -56,43 +56,43 @@ body, html {
   background-color: white;
   color: #b30000;
   border: 2px solid #b30000;
-  padding: 12px 20px; /* Botones más grandes */
+  padding: 12px 20px;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 16px; /* Tamaño de fuente más grande */
+  font-size: 16px;
   text-align: center;
-  width: 80%; /* Ancho ajustado */
+  width: 80%;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  transition: background-color 0.3s, transform 0.3s; /* Transiciones agregadas */
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Hover con efecto de escala */
 .navbar-links button:hover {
   background-color: #ffe5e5;
-  transform: scale(1.05); /* Aumento sutil */
+  transform: scale(1.05);
 }
 
-/* Contenedor del icono y texto */
+/* Contenedor del icono y texto (ajustado para ser más pequeño) */
 .hamburger-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrado */
+  justify-content: center;
   gap: 10px;
-  width: 100%;
-  border: 2px solid #fff; /* Marco blanco oriental */
+  width: auto;
+  max-width: 90%;
+  border: 2px solid #fff;
   border-radius: 12px;
   padding: 8px 12px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Texto flotante al lado de las 3 barras */
 .hamburger-text {
   color: #fff;
-  font-size: 18px; /* Ajuste de tamaño */
+  font-size: 18px;
   font-weight: bold;
   animation: flotarExplora 2s ease-in-out infinite alternate;
   white-space: nowrap;
-  margin-left: 10px; /* Espacio entre el icono y el texto */
+  margin-left: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -107,7 +107,7 @@ body, html {
 /* Estilo para secciones */
 .seccion {
   display: none;
-  margin-top: 160px; /* espacio para navbar */
+  margin-top: 160px;
   padding: 10px;
 }
 
@@ -124,7 +124,7 @@ body, html {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-/* Modal de registro - Aumentar el tamaño de la carta */
+/* Modal de registro */
 .modal {
   display: none;
   position: fixed;
@@ -137,12 +137,12 @@ body, html {
 }
 
 .modal-content {
-  background-color: #dcdcdc; /* Gris plomo oriental */
-  padding: 30px; /* Mayor espacio */
+  background-color: #dcdcdc;
+  padding: 30px;
   border-radius: 10px;
   text-align: center;
   width: 90%;
-  max-width: 400px; /* Ajuste tamaño */
+  max-width: 400px;
   border: 3px solid #b30000;
   box-shadow: 0 0 10px #b30000;
 }
@@ -152,7 +152,7 @@ body, html {
 }
 
 .modal-buttons button {
-  padding: 12px 20px; /* Botones más grandes */
+  padding: 12px 20px;
   margin: 5px;
   background-color: #b30000;
   color: #fff;
@@ -187,5 +187,9 @@ body, html {
 
   .modal-content {
     width: 95%;
+  }
+
+  .hamburger-container {
+    max-width: 85%;
   }
 }

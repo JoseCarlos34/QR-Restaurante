@@ -11,10 +11,11 @@ setTimeout(() => {
   document.getElementById("modal").style.display = "flex";
 }, 3000);
 
-// Eventos de los botones del modal
 document.addEventListener("DOMContentLoaded", () => {
   const aceptarBtn = document.getElementById("aceptarBtn");
   const cancelarBtn = document.getElementById("cancelarBtn");
+  const hamburger = document.querySelector('.hamburger');
+  const navbarLinks = document.querySelector('.navbar-links');
 
   if (aceptarBtn && cancelarBtn) {
     aceptarBtn.addEventListener("click", () => {
@@ -26,14 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Asignar el evento al icono hamburguesa
-  const hamburger = document.querySelector('.hamburger');
-  const navbarLinks = document.querySelector('.navbar-links');
-
   if (hamburger && navbarLinks) {
     hamburger.addEventListener('click', () => {
       navbarLinks.classList.toggle('active');
-      hamburger.classList.toggle('active'); // Rotar icono hamburguesa
+      hamburger.classList.toggle('active');
     });
   }
+
+  // ✅ Cerrar el menú al hacer clic en un botón del navbar
+  const navbarButtons = document.querySelectorAll('.navbar-links button');
+  navbarButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      navbarLinks.classList.remove('active');     // Oculta botones
+      hamburger.classList.remove('active');       // Regresa icono
+    });
+  });
 });
