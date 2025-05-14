@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
   background-color: #74726f;
-  overflow-x: hidden; /* Bloqueo de movimiento lateral en móviles */
+  overflow-x: hidden;
 }
 
 /* NAVBAR ORIENTAL FIJO SOLO PARA MÓVILES */
@@ -13,7 +13,7 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #b30000; /* Rojo japonés */
+  background-color: #b30000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   z-index: 999;
   padding: 12px 15px;
@@ -22,7 +22,6 @@ body, html {
   align-items: center;
 }
 
-/* Icono hamburguesa oriental (más grande y visible) */
 .hamburger {
   font-size: 32px;
   color: white;
@@ -32,12 +31,10 @@ body, html {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Animación rotatoria cuando está activo */
 .hamburger.active {
   transform: rotate(90deg);
 }
 
-/* Enlaces del navbar desplegables */
 .navbar-links {
   display: none;
   flex-direction: column;
@@ -51,7 +48,6 @@ body, html {
   display: flex;
 }
 
-/* Botones estilo oriental dentro del navbar */
 .navbar-links button {
   background-color: white;
   color: #b30000;
@@ -71,7 +67,6 @@ body, html {
   transform: scale(1.05);
 }
 
-/* Contenedor del icono y texto (ajustado para ser más pequeño) */
 .hamburger-container {
   display: flex;
   align-items: center;
@@ -85,7 +80,6 @@ body, html {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Texto flotante al lado de las 3 barras */
 .hamburger-text {
   color: #fff;
   font-size: 18px;
@@ -98,7 +92,6 @@ body, html {
   text-align: center;
 }
 
-/* Animación para el texto 'Explora' */
 @keyframes flotarExplora {
   0% { transform: translateY(0); }
   100% { transform: translateY(-4px); }
@@ -108,20 +101,27 @@ body, html {
 .seccion {
   display: none;
   margin-top: 160px;
-  padding: 10px;
+  padding: 10px 5px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .seccion.activa {
   display: block;
 }
 
-/* Estilo para imágenes: encuadre oriental */
+/* Imagen de la carta: Alta calidad, responsiva */
 .seccion img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border: 8px solid #b30000;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  image-rendering: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Modal de registro */
@@ -167,9 +167,7 @@ body, html {
   background-color: #800000;
 }
 
-/* ======================= */
 /* 🟢 ADAPTACIÓN A MÓVILES */
-/* ======================= */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px;
@@ -192,11 +190,15 @@ body, html {
   .hamburger-container {
     max-width: 85%;
   }
+
+  .seccion img {
+    border-width: 6px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  }
 }
 
-/* ======================= */
 /* ✅ BOTÓN VOLVER A CARTA */
-/* ======================= */
 .volver-carta {
   position: fixed;
   bottom: 20px;
@@ -218,3 +220,4 @@ body, html {
 .volver-carta:hover {
   background-color: #800000;
 }
+/* 🟢 ADAPTACIÓN A MÓVILES */
