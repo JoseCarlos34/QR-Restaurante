@@ -193,3 +193,28 @@ body, html {
     max-width: 85%;
   }
 }
+
+/* ======================= */
+/* ✅ BOTÓN VOLVER A CARTA */
+/* ======================= */
+.volver-carta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  z-index: 1002;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+.volver-carta:hover {
+  background-color: #800000;
+}

@@ -9,42 +9,37 @@
 <body>
   <!-- Barra de navegación tipo hamburguesa -->
   <nav class="navbar">
-  <div class="hamburger-container">
-    <div class="hamburger" id="hamburger" onclick="toggleNavbar()">&#9776;</div>
-    <div class="hamburger-text">🎌 Explora NAGASAKI 🍜</div>
-  </div>
-  <div class="navbar-links">
-    <button onclick="mostrarSeccion('carta1')">🍱 Para Comenzar!</button>
-    <button onclick="mostrarSeccion('carta2')">🍣 Fusión!</button>
-    <button onclick="mostrarSeccion('bebidas1')">🥤 Refrescos y Cócteles</button>
-    <button onclick="mostrarSeccion('bebidas2')">🍶 Clásicos</button>
-    <button onclick="mostrarSeccion('combos')">🍛 Combos</button>
-    <button onclick="mostrarSeccion('promos')">🎉 Promos</button>
-  </div>
-</nav>
+    <div class="hamburger-container">
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <div class="hamburger-text">🎌 Explora NAGASAKI 🍜</div>
+    </div>
+    <div class="navbar-links">
+      <button onclick="mostrarSeccion('carta1')">🍱 Para Comenzar!</button>
+      <button onclick="mostrarSeccion('carta2')">🍣 Fusión!</button>
+      <button onclick="mostrarSeccion('bebidas1')">🥤 Refrescos y Cócteles</button>
+      <button onclick="mostrarSeccion('bebidas2')">🍶 Clásicos</button>
+      <button onclick="mostrarSeccion('combos')">🍛 Combos</button>
+      <button onclick="mostrarSeccion('promos')">🎉 Promos</button>
+    </div>
+  </nav>
 
-
+  <!-- Secciones de la carta -->
   <div class="secciones">
     <section id="carta1" class="seccion activa">
       <img src="images/CartaNagasaki1.png" alt="Carta 1" />
     </section>
-
     <section id="carta2" class="seccion">
       <img src="images/CartaNagasaki2.png" alt="Carta 2" />
     </section>
-
     <section id="bebidas1" class="seccion">
       <img src="images/Bebidas1.png" alt="Bebidas 1" />
     </section>
-
     <section id="bebidas2" class="seccion">
       <img src="images/Bebidas2.png" alt="Bebidas 2" />
     </section>
-
     <section id="combos" class="seccion">
       <img src="images/NagasakiCombos.png" alt="Combos" />
     </section>
-
     <section id="promos" class="seccion">
       <img src="images/NagasakiPromos.png" alt="Promociones" />
     </section>
@@ -53,13 +48,16 @@
   <!-- MODAL REGISTRO -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <p>¡Regístrate completando el formulario y disfruta los beneficios de "🍣🥢 NAGASAKI 🏮🍜"! </p>
+      <p>¡Regístrate completando el formulario y disfruta los beneficios de "🍣🥢 NAGASAKI 🏮🍜"!</p>
       <div class="modal-buttons">
         <button id="aceptarBtn">Sí, quiero</button>
         <button id="cancelarBtn">No, gracias</button>
       </div>
     </div>
   </div>
+
+  <!-- Botón para volver a la carta -->
+  <button id="volverCartaBtn" class="volver-carta" style="display:none;">⬅️ Volver a la carta</button>
 
   <script src="script.js"></script>
 </body>

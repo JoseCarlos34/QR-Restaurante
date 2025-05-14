@@ -16,17 +16,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const cancelarBtn = document.getElementById("cancelarBtn");
   const hamburger = document.querySelector('.hamburger');
   const navbarLinks = document.querySelector('.navbar-links');
+  const volverCartaBtn = document.getElementById("volverCartaBtn");
 
-  if (aceptarBtn && cancelarBtn) {
-    aceptarBtn.addEventListener("click", () => {
-      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScbi6Yvm_FYCHGXEDE40N8ejmK0H7z7aDpiO-W7DXcHatrvNA/viewform?usp=header";
+  // ✅ Mostrar botón "Volver a la carta" si la URL tiene ?from=form
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("from") === "form") {
+    if (volverCartaBtn) {
+      volverCartaBtn.style.display = "block";
+    }
+  }
+
+  // ✅ Acción del botón "Volver a la carta"
+  if (volverCartaBtn) {
+    volverCartaBtn.addEventListener("click", () => {
+      volverCartaBtn.style.display = "none";
+      mostrarSeccion('carta1'); // Vuelve a la sección principal
     });
+  }
 
+  // ✅ Acción si acepta registrarse
+  if (aceptarBtn) {
+    aceptarBtn.addEventListener("click", () => {
+      // Redirección al formulario con marca de regreso
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScbi6Yvm_FYCHGXEDE40N8ejmK0H7z7aDpiO-W7DXcHatrvNA/viewform?usp=header&from=form";
+    });
+  }
+
+  // ✅ Cierra el modal
+  if (cancelarBtn) {
     cancelarBtn.addEventListener("click", () => {
       document.getElementById("modal").style.display = "none";
     });
   }
 
+  // ✅ Acción del menú hamburguesa
   if (hamburger && navbarLinks) {
     hamburger.addEventListener('click', () => {
       navbarLinks.classList.toggle('active');
@@ -34,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ Cerrar el menú al hacer clic en un botón del navbar
+  // ✅ Cerrar menú cuando se hace clic en un botón
   const navbarButtons = document.querySelectorAll('.navbar-links button');
   navbarButtons.forEach(button => {
     button.addEventListener('click', () => {
